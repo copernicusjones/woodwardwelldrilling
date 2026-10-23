@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Well Drilling in Woodward, OK | Local Drillers and What a Well Costs</title>
-<meta name="description" content="Three companies drill water wells in Woodward County. Who they are, what a new well runs in this part of Oklahoma, and what the work involves from first call to running water.">
+<meta name="description" content="Water wells in Woodward County, Oklahoma. What the state's own well records say about depth and yield here, what a system costs, and the drillers working the county.">
 <link rel="canonical" href="https://woodwardwelldrilling.com/">
 <meta property="og:title" content="Well Drilling in Woodward, OK">
-<meta property="og:description" content="The drillers working Woodward County, what a well costs here, and how the job goes.">
+<meta property="og:description" content="What Woodward County wells actually look like: depth, yield, cost, and the drillers working here.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://woodwardwelldrilling.com/">
 <style>
@@ -33,10 +33,13 @@ p{margin-bottom:14px}
 p:last-child{margin-bottom:0}
 
 header{border-bottom:1px solid var(--rule-dk);background:#fff}
-.hdr{display:flex;align-items:center;justify-content:space-between;height:62px;gap:14px}
+.hdr{display:flex;align-items:center;justify-content:space-between;height:64px;gap:14px}
 .brand{font-family:Georgia,serif;font-weight:700;font-size:1.06rem;color:var(--ink);text-decoration:none}
 .brand small{display:block;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
   font-weight:400;font-size:.72rem;color:var(--muted);letter-spacing:.04em;margin-top:1px}
+.hdr nav{display:flex;align-items:center;gap:16px}
+.hdr a.tel{font-weight:700;color:var(--ink);text-decoration:none;font-size:1rem;white-space:nowrap}
+.hdr a.tel:hover{color:var(--blue)}
 .hdr a.cta{font-size:.88rem;font-weight:600;padding:9px 15px;border:1.5px solid var(--blue);
   color:var(--blue);text-decoration:none;border-radius:3px;white-space:nowrap}
 .hdr a.cta:hover{background:var(--blue);color:#fff}
@@ -45,7 +48,15 @@ header{border-bottom:1px solid var(--rule-dk);background:#fff}
 .kicker{font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);
   font-weight:600;margin-bottom:12px}
 .lede{font-size:1.09rem;max-width:62ch}
-.hero-actions{margin-top:22px;display:flex;flex-wrap:wrap;gap:10px}
+.callbox{margin-top:24px;padding:18px 20px;background:#fff;border:1px solid var(--rule-dk);
+  border-left:4px solid var(--blue);border-radius:2px}
+.callbox .lbl{font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);
+  font-weight:600;margin-bottom:4px}
+.callbox a.num{font-family:Georgia,serif;font-size:1.72rem;font-weight:700;color:var(--blue);
+  text-decoration:none;display:inline-block;line-height:1.15}
+.callbox a.num:hover{text-decoration:underline}
+.callbox p{font-size:.9rem;color:var(--muted);margin:6px 0 0}
+.hero-actions{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
 .btn{display:inline-block;background:var(--blue);color:#fff;padding:13px 22px;font-weight:600;
   font-size:.97rem;border-radius:3px;text-decoration:none}
 .btn:hover{background:var(--blue-dk)}
@@ -67,6 +78,7 @@ p.intro{max-width:62ch;margin-bottom:20px}
 .company:last-of-type{border-bottom:1px solid var(--rule)}
 .company .meta{font-size:.84rem;color:var(--muted);margin-bottom:7px}
 .company p{font-size:.97rem;margin-bottom:0}
+.company p + p{margin-top:8px}
 .small{font-size:.85rem;color:var(--muted);margin-top:14px}
 
 .cost h3{margin-top:22px}
@@ -95,6 +107,8 @@ details p{padding:0 26px 16px 0;font-size:.96rem}
 
 .formsec{background:#f2eee5;border-top:1px solid var(--rule-dk);border-bottom:1px solid var(--rule-dk)}
 .formsec h2{border-bottom:0;padding-bottom:0}
+.formsec .altcall{font-size:.95rem;margin-bottom:18px}
+.formsec .altcall a{font-weight:700}
 .field{margin-bottom:15px}
 label{display:block;font-size:.86rem;font-weight:600;margin-bottom:5px;color:var(--ink)}
 input,select,textarea{width:100%;font:inherit;font-size:.96rem;padding:11px 12px;
@@ -111,10 +125,12 @@ button:disabled{opacity:.6;cursor:default}
 #formStatus.ok{color:#1a6b45}
 #formStatus.err{color:#a23526}
 .hidden{display:none!important}
+#formStatus a{font-weight:700}
 
 footer{background:#22201c;color:#c9c3b6;padding:34px 0 30px;font-size:.87rem}
 footer a{color:#9fbcd4}
 .foot-brand{font-family:Georgia,serif;color:#fff;font-size:1rem;font-weight:700;margin-bottom:6px}
+.foot-tel{color:#fff;font-weight:700;text-decoration:none;font-size:1.05rem}
 .disclosure{border-top:1px solid rgba(255,255,255,.16);margin-top:22px;padding-top:18px;
   color:#9c968a;font-size:.79rem;line-height:1.6}
 
@@ -125,6 +141,10 @@ footer a{color:#9fbcd4}
   .two{grid-template-columns:1fr}
   .aag div{flex-direction:column;gap:2px}
   .aag div b{text-align:left}
+  .hdr{height:auto;padding:12px 0;flex-wrap:wrap}
+  .hdr nav{width:100%;justify-content:space-between}
+  .hdr a.cta{display:none}
+  .callbox a.num{font-size:1.5rem}
 }
 </style>
 </head>
@@ -133,7 +153,10 @@ footer a{color:#9fbcd4}
 <header>
   <div class="wrap hdr">
     <a class="brand" href="#top">Woodward Well Drilling<small>Woodward County, Oklahoma</small></a>
-    <a class="cta" href="#quote">Request a quote</a>
+    <nav>
+      <a class="tel" href="tel:+15702314151">(570) 231-4151</a>
+      <a class="cta" href="#quote">Request a quote</a>
+    </nav>
   </div>
 </header>
 
@@ -142,82 +165,88 @@ footer a{color:#9fbcd4}
 <div class="wrap hero">
   <div class="kicker">Woodward, Oklahoma</div>
   <h1>Water Well Drilling in Woodward, OK</h1>
-  <p class="lede">Three companies drill water wells in Woodward County. Below is who they are, what a well runs in this part of Oklahoma, and what happens between the first phone call and water in the tap.</p>
+  <p class="lede">Woodward County wells are shallower and cheaper than most people expect. Below is what the state's own well records show for this county, what a system runs here, and the drillers who work it.</p>
+
+  <div class="callbox">
+    <div class="lbl">Call or text</div>
+    <a class="num" href="tel:+15702314151">(570) 231-4151</a>
+    <p>Tell me where the property is and what you are trying to do. I will tell you who to call and roughly what it should cost.</p>
+  </div>
+
   <div class="hero-actions">
     <a class="btn" href="#quote">Request a quote</a>
     <a class="btn-2" href="#drillers">See the drillers</a>
   </div>
 
   <div class="aag">
-    <div><span>Drillers serving the county</span><b>3</b></div>
-    <div><span>Typical installed cost</span><b>$8,000 to $30,000</b></div>
-    <div><span>Drilling time once the rig is on site</span><b>1 to 3 days</b></div>
-    <div><span>Wait for a slot</span><b>Ask each one, it swings with the season</b></div>
+    <div><span>Median well depth, Woodward County</span><b>98 ft</b></div>
+    <div><span>Complete system at that depth</span><b>$5,400 to $9,000</b></div>
+    <div><span>Median static water level</span><b>40 ft down</b></div>
+    <div><span>Median tested yield</span><b>30 gpm</b></div>
   </div>
 </div>
 
 <section id="drillers">
   <div class="wrap">
-    <h2>The drillers working Woodward County</h2>
-    <p class="intro">All three are small shops, which is how it goes out here. Ask about wait times before you ask about price. A low quote six months out does not help if you needed water last month.</p>
+    <h2>Who drills water wells here</h2>
+    <p class="intro">These are the outfits that come up for Woodward County. Call and ask two things before you talk price: whether they are licensed for water wells, and how far out they are booked.</p>
 
     <div class="company">
-      <h3>R &amp; R Well Services</h3>
-      <div class="meta">5.0 stars &middot; 2 Google reviews</div>
-      <p>Two reviews, both five stars. Good sign, small sample. Ask them for a couple of names in the county you can call.</p>
+      <h3>Neill Well Services LLC</h3>
+      <div class="meta">21171 OK-34, Sharon, OK &middot; <a href="tel:+15803340545">(580) 334-0545</a> &middot; <a href="https://nwsok.com" target="_blank" rel="noopener nofollow">nwsok.com</a></div>
+      <p>Family water well business east of Woodward, out toward Sharon. Site lists drilling and pump installation, plus windmill repair, solar pumps, and stock tanks, which tells you they do farm and ranch work, not just houses.</p>
+    </div>
+
+    <div class="company">
+      <h3>R &amp; R Well Service Inc</h3>
+      <div class="meta">507 48th St, Woodward, OK &middot; <a href="tel:+15802543068">(580) 254-3068</a></div>
+      <p>Listed in Woodward for around twenty years. Confirm on the phone that they drill water wells and not just oilfield work before you book, because the two trades share a street out on 48th.</p>
     </div>
 
     <div class="company">
       <h3>North Star Well Services Inc</h3>
-      <div class="meta">4.5 stars &middot; 4 Google reviews &middot; <a href="https://nwsok.com" target="_blank" rel="noopener nofollow">nwsok.com</a></div>
-      <p>The only one of the three with a website. They have been around a while and take on both house wells and agriculture work.</p>
+      <div class="meta">Woodward, OK &middot; <a href="tel:+15802565644">(580) 256-5644</a></div>
+      <p>Second Woodward number worth a call. Ask the same question first. I could not confirm a website for them, so treat the phone as the only reliable way in.</p>
     </div>
 
-    <div class="company">
-      <h3>Neill Well Services LLC</h3>
-      <div class="meta">3.7 stars &middot; 3 Google reviews</div>
-      <p>Three reviews is not many. At that size one rough week drags the average a long way, so ask about jobs they finished this year rather than reading the stars.</p>
-    </div>
-
-    <p class="small">Ratings and review counts as published on Google, October 2026. Small-town counts are thin and they change.</p>
+    <p class="small">Contact details from public listings, October 2026. This is not every driller in the county. Before you hire anyone, get their Oklahoma water well driller license number and check it with the state.</p>
   </div>
 </section>
 
 <section class="cost">
   <div class="wrap">
-    <h2>What a well costs here</h2>
-    <p class="intro">Drillers quote the hole and the pump as separate things, and depth moves the total more than anything else you control.</p>
+    <h2>What a well actually costs here</h2>
+    <p class="intro">Most guides quote national numbers and scare people off. Woodward County has about 1,900 recorded wells and the state keeps the depth on nearly all of them, so the local picture is not a guess.</p>
 
-    <h3>Depth</h3>
-    <p>Wells in northwest Oklahoma go deeper than people moving in from wetter country expect, because the shallow water is not dependable. You pay by the foot, and casing runs by the foot too.</p>
+    <h3>How deep</h3>
+    <p>Half of the wells in this county are between 60 and 155 feet. A quarter of them finish under 100 feet. Only about one in eight goes past 250. That is shallow by national standards, and it is the single biggest reason a well here costs less than people budget for.</p>
 
-    <h3>Equipment in the hole</h3>
-    <p>Casing, screen, and grout go in alongside the drilling. A hole that runs through sand and gravel gets cased differently than one that does not.</p>
-
-    <h3>The pump</h3>
-    <p>Pump, pressure tank, wiring, and the pitless adapter usually land on their own line. Figure a fifth to a third of the whole job.</p>
+    <h3>Where the water sits</h3>
+    <p>Median static water level is 40 feet down. Median tested yield is 30 gallons a minute, and a house needs five to ten. Water is not usually the problem in this county. Getting a good hole and a properly sized pump is.</p>
 
     <h3>What people pay</h3>
-    <div class="costrow"><span>Residential well, shallow end</span><b>$8,000</b></div>
-    <div class="costrow"><span>Typical residential, installed</span><b>$12,000 &ndash; $20,000</b></div>
-    <div class="costrow"><span>Deep or difficult hole</span><b>$25,000 &ndash; $30,000</b></div>
+    <div class="costrow"><span>Drilling and casing alone, median depth</span><b>$2,250 &ndash; $5,850</b></div>
+    <div class="costrow"><span>Complete system, pump and hookup included</span><b>$5,400 &ndash; $9,000</b></div>
+    <div class="costrow"><span>Deeper or difficult hole, 250 ft and beyond</span><b>$12,000 &ndash; $30,000</b></div>
     <div class="costrow"><span>Pump replacement only</span><b>$1,500 &ndash; $4,500</b></div>
     <div class="costrow"><span>Lab water test</span><b>$50 &ndash; $200</b></div>
-    <p class="small">Regional planning figures, not a quote. Depth and equipment decide the real number.</p>
-    <p class="small">Get the quote in writing with the hole and the pump broken out. One bundled number cannot be compared against another bundled number.</p>
+    <p class="small">Derived from state well records for Woodward County and published per-foot rates. Not a quote. Site access, casing, and what the bit runs into decide the real number.</p>
+
+    <h3>One thing to get in writing</h3>
+    <p>Have the quote break out the hole from the pump. A single bundled number from one driller cannot be compared against a bundled number from another, and that is where people overpay.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <h2>From first call to water</h2>
-    <p class="intro">A residential job here runs a few weeks start to finish. The drilling is the short part of it.</p>
+    <h2>How the job goes</h2>
+    <p class="intro">For most houses here it is a few weeks end to end. The rig is only on your land for a day or two of that.</p>
 
     <ol class="steps">
-      <li><h3>Get on the schedule</h3><p>Ask for a rough date, not just a price. Slots move with the weather and with whatever the last job turned into.</p></li>
-      <li><h3>They come look at the ground</h3><p>Rig access, how far the hole sits from the septic and the property line, and where the tank and the line into the house will go.</p></li>
-      <li><h3>Drilling</h3><p>The rig sets up, the hole goes down, casing follows it. The driller logs the depth and what they hit on the way. One to three days for most houses.</p></li>
-      <li><h3>Pump, water test, paperwork</h3><p>The pump and pressure system get tied into the house, the water gets tested, and the driller files the completion report with the state. You end up with running water and a record of the well.</p></li>
+      <li><h3>Get on the schedule</h3><p>Ask for a date, not just a price. In a wet spring or a dry summer the wait moves a lot, and a cheap quote three months out does not help if you need water now.</p></li>
+      <li><h3>They walk the ground</h3><p>Where the rig can get in, how far the hole sits from the septic and the property line, and where the pressure tank and the line into the house will land.</p></li>
+      <li><h3>Drilling</h3><p>Most Woodward County holes finish in a day. Casing goes in behind the bit and the driller logs the depth and what they hit on the way down.</p></li>
+      <li><h3>Pump, test, paperwork</h3><p>The pump and pressure system get tied in, the water gets tested, and the driller files the completion report with the state. You end up with running water and a permanent record of the well that stays with the property.</p></li>
     </ol>
   </div>
 </section>
@@ -227,23 +256,23 @@ footer a{color:#9fbcd4}
     <h2>Questions people ask</h2>
 
     <details><summary>How deep will my well be?</summary>
-      <p>Nobody can tell you from a desk. It depends on where in the county you are, and drillers here often run several hundred feet before the water is dependable. Ask each one what depth they would budget for on your ground, and how they bill if they have to keep going.</p>
+      <p>In this county, probably not deep. Half of the recorded wells land between 60 and 155 feet and the median is 98. Ask each driller what depth they would budget for on your ground and how they bill if they have to keep going past it.</p>
     </details>
 
     <details><summary>Do I need a permit?</summary>
-      <p>Oklahoma handles water wells at the state level, and the completion paperwork usually gets filed by the licensed driller as part of the job. Before work starts, ask your contractor what they file and whether you sign anything.</p>
+      <p>Oklahoma handles water wells at the state level through the Water Resources Board. Ordinary household and livestock wells are generally exempt from the permit requirement, while larger commercial and irrigation work is not. The completion report gets filed by the driller either way. Ask your contractor what they file and whether you sign anything.</p>
     </details>
 
     <details><summary>Will the water be safe to drink?</summary>
-      <p>Test it. Groundwater around here can carry hardness, sulfur, iron, or nitrates depending on the spot, and you will not see any of that in a glass. A lab test costs a fraction of the well and tells you whether you need treatment before it reaches your plumbing.</p>
+      <p>Test it. Groundwater here can carry hardness, sulfur, iron, or nitrates depending on the spot, and none of that shows up in a glass. A lab test costs a fraction of the well and tells you whether you need treatment before it reaches your plumbing.</p>
     </details>
 
     <details><summary>Is a well cheaper than staying on rural water?</summary>
-      <p>Usually over ten or twenty years, especially if the line is long or you are hauling. Compare the up-front well cost against the monthly bill plus tap and line fees. Run both numbers before you commit.</p>
+      <p>At $5,400 to $9,000 for a complete system, usually yes over ten or twenty years, especially if the line is long or you are hauling. Compare it against the monthly bill plus tap and line fees and run both numbers before you commit.</p>
     </details>
 
     <details><summary>What if they don't hit water?</summary>
-      <p>Ask before you sign. Drillers handle it differently, and the answer matters most in a dry year.</p>
+      <p>Ask before you sign. Drillers handle a dry hole differently, and the answer matters most in a dry year. Given how shallow the wells run here it is uncommon, but uncommon is not never.</p>
     </details>
 
     <details><summary>How long does a well last?</summary>
@@ -255,7 +284,7 @@ footer a{color:#9fbcd4}
 <section class="formsec" id="quote">
   <div class="wrap">
     <h2>Request a quote</h2>
-    <p class="intro">Tell us where the property is and what you are trying to do. That is enough for a driller to give you a ballpark and a rough date.</p>
+    <p class="altcall">Fastest way is to call or text <a href="tel:+15702314151">(570) 231-4151</a>. If you would rather type, use the form.</p>
 
     <form id="quoteForm" novalidate>
       <div class="two">
@@ -269,7 +298,7 @@ footer a{color:#9fbcd4}
         </div>
       </div>
       <div class="field">
-        <label for="email">Email</label>
+        <label for="email">Email (optional)</label>
         <input id="email" name="email" type="email" autocomplete="email">
       </div>
       <div class="field">
@@ -289,7 +318,7 @@ footer a{color:#9fbcd4}
       </div>
       <button type="submit" id="submitBtn">Send request</button>
       <p id="formStatus" class="hidden"></p>
-      <p class="formnote">No account needed. Your details go to a local contractor, for your job.</p>
+      <p class="formnote">Your details go to a local driller, for your job. Nothing else.</p>
     </form>
   </div>
 </section>
@@ -301,10 +330,13 @@ footer a{color:#9fbcd4}
     <div class="foot-brand">Woodward Well Drilling</div>
     <div>An independent reference for water wells in Woodward County, Oklahoma. Last updated October 2026.</div>
     <div style="margin-top:14px">
+      <a class="foot-tel" href="tel:+15702314151">(570) 231-4151</a>
+    </div>
+    <div style="margin-top:12px">
       <a href="#quote">Request a quote</a> &nbsp;&middot;&nbsp; <a href="#drillers">The drillers</a> &nbsp;&middot;&nbsp; <a href="#top">Top</a>
     </div>
     <div class="disclosure">
-      Woodward Well Drilling is an independent information and referral resource. It is not a drilling company and does not drill wells, install pumps, or do repairs. Company names, ratings, and review counts are as published publicly. Any quote or contract is between you and the contractor you hire. Cost ranges are typical regional figures for planning, not a bid.
+      Woodward Well Drilling is an independent information and referral resource. It is not a drilling company and does not drill wells, install pumps, or do repairs. If a driller pays for referrals, that is disclosed here: this site may receive compensation from contractors it refers. Company names and contact details are as published publicly and are not endorsements. Any quote or contract is between you and the contractor you hire, and you should confirm licensing with the state before work begins. Cost ranges are regional figures for planning, not a bid.
     </div>
   </div>
 </footer>
@@ -325,11 +357,11 @@ footer a{color:#9fbcd4}
       "@type": "FAQPage",
       "@id": "https://woodwardwelldrilling.com/#faq",
       "mainEntity": [
-        {"@type":"Question","name":"How deep will my well be in Woodward, OK?","acceptedAnswer":{"@type":"Answer","text":"It depends on where in Woodward County the property sits. Drillers here often run several hundred feet before the water is dependable, and the driller confirms depth on site as the hole goes down."}},
-        {"@type":"Question","name":"Do I need a permit for a water well in Oklahoma?","acceptedAnswer":{"@type":"Answer","text":"Oklahoma regulates water wells at the state level. The completion paperwork is usually filed by the licensed driller as part of the job. Ask your contractor what they file and whether you sign anything before work starts."}},
+        {"@type":"Question","name":"How deep will my water well be in Woodward County, Oklahoma?","acceptedAnswer":{"@type":"Answer","text":"Shallower than most of the country. Half of the recorded wells in Woodward County fall between 60 and 155 feet, and the median is 98 feet. Only about one in eight goes past 250 feet."}},
+        {"@type":"Question","name":"Do I need a permit for a water well in Oklahoma?","acceptedAnswer":{"@type":"Answer","text":"Oklahoma regulates water wells at the state level through the Water Resources Board. Ordinary household and livestock wells are generally exempt from the permit requirement, while larger commercial and irrigation work is not. The driller files a completion report either way. Ask your contractor what they file and whether you sign anything."}},
+        {"@type":"Question","name":"How much does a water well cost in Woodward County, Oklahoma?","acceptedAnswer":{"@type":"Answer","text":"At the county's median depth, drilling and casing alone runs roughly 2,250 to 5,850 dollars. A complete system with the pump, pressure tank, and hookup typically runs 5,400 to 9,000 dollars. Deeper holes past 250 feet run considerably more."}},
         {"@type":"Question","name":"Will well water be safe to drink?","acceptedAnswer":{"@type":"Answer","text":"Test it before drinking. Groundwater in northwest Oklahoma can carry hardness, sulfur, iron, or nitrates depending on location. A lab test costs a fraction of the well and shows whether treatment is needed."}},
-        {"@type":"Question","name":"How much does a water well cost in Woodward, Oklahoma?","acceptedAnswer":{"@type":"Answer","text":"Installed residential wells in the region run roughly 8,000 to 30,000 dollars depending on depth, casing, and the pump system. Ask for a written quote that separates the drilling from the pump."}},
-        {"@type":"Question","name":"What if the driller does not hit water?","acceptedAnswer":{"@type":"Answer","text":"Ask before you sign. Drillers handle a dry hole differently, and it matters most in a dry year."}},
+        {"@type":"Question","name":"What if the driller does not hit water?","acceptedAnswer":{"@type":"Answer","text":"Ask before you sign. Drillers handle a dry hole differently. Wells are shallow in this county so it is uncommon, but it does happen."}},
         {"@type":"Question","name":"How long does a water well last?","acceptedAnswer":{"@type":"Answer","text":"Casing done right lasts decades. The pump is the part that fails, typically somewhere between ten and twenty years, so plan on replacing it as normal maintenance."}}
       ]
     }
@@ -340,20 +372,32 @@ footer a{color:#9fbcd4}
 <script>
 (function(){
   // ---- Lead delivery config -------------------------------------------
-  // Set LEAD_ENDPOINT to your form handler (Formspree, Cloudflare Worker,
-  // Netlify Function, etc.) to collect leads server-side.
-  // While empty, the form falls back to a prefilled email so no lead is lost.
+  // Set LEAD_ENDPOINT to a real form handler (Formspree, Cloudflare Worker,
+  // Netlify Function) to collect leads server-side without the mail client.
+  // While it is empty the form opens a prefilled email, and every failure
+  // path still shows the phone number so no lead is lost.
   var LEAD_ENDPOINT = "";          // e.g. "https://formspree.io/f/xxxxxxx"
   var FALLBACK_EMAIL = "leads@woodwardwelldrilling.com";
+  var PHONE_DISPLAY  = "(570) 231-4151";
+  var PHONE_TEL      = "+15702314151";
   // ---------------------------------------------------------------------
 
   var form = document.getElementById('quoteForm');
   var status = document.getElementById('formStatus');
   var btn = document.getElementById('submitBtn');
 
-  function show(msg, kind){
+  function show(msg, kind, withPhone){
+    // DOM nodes only, no innerHTML. All strings here are constants defined
+    // in this file; no user input ever reaches the status line.
     status.textContent = msg;
-    status.className = kind;
+    if(withPhone){
+      status.appendChild(document.createTextNode(' '));
+      var a = document.createElement('a');
+      a.href = 'tel:' + PHONE_TEL;
+      a.textContent = PHONE_DISPLAY;
+      status.appendChild(a);
+    }
+    status.className = kind || '';
     status.classList.remove('hidden');
   }
 
@@ -382,7 +426,7 @@ footer a{color:#9fbcd4}
       var href = 'mailto:' + FALLBACK_EMAIL +
                  '?subject=' + encodeURIComponent('Well drilling quote request - ' + data.name) +
                  '&body=' + encodeURIComponent(body);
-      show('Opening your email app to send the request...', 'ok');
+      show('Opening your email app to send the request. If nothing opens, call or text', 'ok', true);
       window.location.href = href;
       return;
     }
@@ -402,7 +446,7 @@ footer a{color:#9fbcd4}
     }).catch(function(){
       btn.disabled = false;
       btn.textContent = 'Send request';
-      show('That did not go through. Please try again, or call a contractor directly.', 'err');
+      show('That did not go through. Call or text', 'err', true);
     });
   });
 })();
