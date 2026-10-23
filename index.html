@@ -287,6 +287,7 @@ footer a{color:#9fbcd4}
     <p class="altcall">Fastest way is to call or text <a href="tel:+15702314151">(570) 231-4151</a>. If you would rather type, use the form.</p>
 
     <form id="quoteForm" novalidate>
+      <input type="text" name="_honey" id="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true">
       <div class="two">
         <div class="field">
           <label for="name">Your name</label>
@@ -376,8 +377,8 @@ footer a{color:#9fbcd4}
   // Netlify Function) to collect leads server-side without the mail client.
   // While it is empty the form opens a prefilled email, and every failure
   // path still shows the phone number so no lead is lost.
-  var LEAD_ENDPOINT = "";          // e.g. "https://formspree.io/f/xxxxxxx"
-  var FALLBACK_EMAIL = "leads@woodwardwelldrilling.com";
+  var LEAD_ENDPOINT = "https://formsubmit.co/ajax/ad3edecc83d49ddf1af71c6d5a78e1fd";
+  var FALLBACK_EMAIL = "";
   var PHONE_DISPLAY  = "(570) 231-4151";
   var PHONE_TEL      = "+15702314151";
   // ---------------------------------------------------------------------
@@ -404,15 +405,24 @@ footer a{color:#9fbcd4}
   form.addEventListener('submit', function(e){
     e.preventDefault();
 
+    var el = function(id){ return document.getElementById(id); };
+    var nameVal = el('name').value.trim();
+
     var data = {
-      name: form.name.value.trim(),
-      phone: form.phone.value.trim(),
-      email: form.email.value.trim(),
-      need: form.need.value,
-      details: form.details.value.trim(),
+      name: nameVal,
+      phone: el('phone').value.trim(),
+      email: el('email').value.trim(),
+      need: el('need').value,
+      details: el('details').value.trim(),
       page: location.href,
-      sent_at: new Date().toISOString()
+      sent_at: new Date().toISOString(),
+      _subject: 'Well drilling quote request - ' + (nameVal || 'new lead'),
+      _template: 'table',
+      _captcha: 'false',
+      _honey: el('_honey').value
     };
+
+    if(data._honey){ return; }   // bot filled the hidden field
 
     if(!data.name || !data.phone){
       show('Please add your name and a phone number so someone can call you back.', 'err');
@@ -420,14 +430,7 @@ footer a{color:#9fbcd4}
     }
 
     if(!LEAD_ENDPOINT){
-      var body = 'Name: ' + data.name + '\nPhone: ' + data.phone +
-                 '\nEmail: ' + (data.email || '(none)') +
-                 '\nNeed: ' + data.need + '\n\n' + data.details;
-      var href = 'mailto:' + FALLBACK_EMAIL +
-                 '?subject=' + encodeURIComponent('Well drilling quote request - ' + data.name) +
-                 '&body=' + encodeURIComponent(body);
-      show('Opening your email app to send the request. If nothing opens, call or text', 'ok', true);
-      window.location.href = href;
+      show('Call or text', 'err', true);
       return;
     }
 
